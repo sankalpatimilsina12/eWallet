@@ -1,5 +1,5 @@
 <form class="form" onsubmit="return submitForgotPassword();">
-  <div id="password-error" style="color: green"></div>
+  <div id="email-error" style="color: green"></div>
   <br>
   <div class="form-group">
     <label for="email"><strong>Email:</strong></label>

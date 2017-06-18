@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteBase /eWallet/
+
+RewriteRule ^api/users$ api/controllers/users-controller.php?route=users&action=getUsers [NC,L]
+RewriteRule ^api/users/$ api/controllers/users-controller.php?route=users&action=getUsers [NC,L]
+
+RewriteRule ^api/([A-Za-z]+)$ api/controllers/users-controller.php?route=users&action=$1 [NC,L]
+RewriteRule ^api/([A-Za-z]+)/$ api/controllers/users-controller.php?route=users&action=$1 [NC,L]
+
+RewriteRule ^api/([A-Za-z]+)/([0-9]+)$ api/controllers/users-controller.php?route=users&action=$1&params[]=$2 [NC,L]
+RewriteRule ^api/([A-Za-z]+)/([0-9]+)/$ api/controllers/users-controller.php?route=users&action=$1&params[]=$2 [NC,L]
+
+RewriteRule ^api/([A-Za-z]+)/([A-Za-z]+)/([0-9A-Za-z]+)$ api/controllers/users-controller.php?route=$1&action=$2&params[]=$3 [NC,L]
+RewriteRule ^api/([A-Za-z]+)/([A-Za-z]+)/([0-9A-Za-z]+)/$ api/controllers/users-controller.php?route=$1&action=$2&params[]=$3 [NC,L]
+
+RewriteRule ^api/([A-Za-z]+)/([A-Za-z]+)$ api/controllers/users-controller.php?route=$1&action=$2 [NC,L]
+RewriteRule ^api/([A-Za-z]+)/([A-Za-z]+)/$ api/controllers/users-controller.php?route=$1&action=$2 [NC,L]
+
+

@@ -1,4 +1,6 @@
 <form class="form" onSubmit="return registerUser();">
+  <div id="register-error" style="color: green"></div>
+  <br>
   <div class="form-group">
     <label><strong>Username:</strong></label>
     <input class="form-control" name="username">

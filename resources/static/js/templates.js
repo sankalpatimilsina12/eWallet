@@ -1,6 +1,6 @@
 function getRegisterTemplate() {
   $.ajax({
-    url: 'http://localhost/eWallet/src/templates/register.php',
+    url: 'http://localhost/eWallet/templates/register.php',
     method: 'GET',
     contentType: 'html',
     success: function(data) {
@@ -18,7 +18,7 @@ function getRegisterTemplate() {
 
 function getLoginTemplate() {
   $.ajax({
-    url: 'http://localhost/eWallet/src/templates/login.php',
+    url: 'http://localhost/eWallet/templates/login.php',
     method: 'GET',
     contentType: 'html',
     success: function(data) {
@@ -43,7 +43,7 @@ function getLogOutTemplate() {
 function getDashboardTemplate(dashboard_data) {
   $.ajax({
     type: 'GET',
-    url: "http://localhost/eWallet/src/templates/dashboard.php",
+    url: "http://localhost/eWallet/templates/dashboard.php",
     success: function(data) {
       var template = Handlebars.compile(data);
       var html = template({data: JSON.parse(dashboard_data)});
@@ -59,7 +59,7 @@ function getDashboardTemplate(dashboard_data) {
 function getForgotPasswordTemplate() {
   $.ajax({
     type: 'GET',
-    url: 'http://localhost/eWallet/src/templates/forgot-password.php',
+    url: 'http://localhost/eWallet/templates/forgot-password.php',
     success: function(data) {
       document.getElementsByClassName("content")[0].innerHTML = data;
     },
@@ -72,7 +72,7 @@ function getForgotPasswordTemplate() {
 function getTokenTemplate(email) {
   $.ajax({
     type: 'GET',
-    url: 'http://localhost/eWallet/src/templates/token_page.php',
+    url: 'http://localhost/eWallet/templates/token_page.php',
     success: function(data) {
       var template = Handlebars.compile(data);
       var context = {
